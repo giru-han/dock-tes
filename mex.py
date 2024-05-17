@@ -21,4 +21,3 @@ database_url = os.getenv("DATABASE_URL")
 # For example:
 print(f"Secret key: {secret_key}")
 print(f"Database URL: {database_url}")
-
