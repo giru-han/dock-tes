@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Make the entrypoint script executable
-RUN chmod +x /entrypoint.sh
+RUN chmod +x entrypoint.sh
 
 # Set environment variable
 ENV SCRIPT_NAME=mex.py
