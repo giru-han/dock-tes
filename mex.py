@@ -24,6 +24,8 @@ print(f"Database URL: {database_url}")
 
 from flask import Flask, jsonify, request
 
+app = Flask(__name__)
+
 @app.route('/webhook', methods=['POST'])
 def webhook():
     print('poster')
