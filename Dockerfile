@@ -15,7 +15,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Make the entrypoint script executable
 # RUN chmod +x entrypoint.sh
-# RUN chmod +x entrypoint.sh && sed -i 's/\r$//' entrypoint.sh
 RUN chmod +x /app/entrypoint.sh && sed -i 's/\r$//' /app/entrypoint.sh
 
 # Set environment variable

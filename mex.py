@@ -21,3 +21,25 @@ database_url = os.getenv("DATABASE_URL")
 # For example:
 print(f"Secret key: {secret_key}")
 print(f"Database URL: {database_url}")
+
+from flask import Flask, jsonify, request
+
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    print('poster')
+    #time.sleep(100)
+    print('poster 2')
+    return 'hello poster'
+ 
+
+@app.route('/try', methods=['GET'])
+def first_fet():
+    print('logg hello')
+    #time.sleep(100)
+    print('logg hello 2')
+    return 'hello rangers'
+
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=5000) # we run in localhost only so use this
+    # we run python app using gunicorn gunicorn --bind 127.0.0.1:5000 main:app
+    # the nginx will auto forward it to port 80 (http)
