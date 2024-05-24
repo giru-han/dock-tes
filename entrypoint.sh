@@ -4,7 +4,7 @@
 export SCRIPT_NAME="mex.py"
 
 # Start Nginx in the background
-nginx &
+#nginx &
 
 # Run the Python script
 python "$SCRIPT_NAME"
