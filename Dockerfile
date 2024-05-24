@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y nginx && apt-get clean
 RUN rm /etc/nginx/sites-enabled/default
 
 # Copy the Nginx configuration file
-COPY nginx_conf /etc/nginx/nginx_conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Make the entrypoint script executable
 # RUN chmod +x entrypoint.sh
