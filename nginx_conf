@@ -1,0 +1,14 @@
+# Replace your_domain_or_ip with your domain or IP address
+server {
+    listen 443 ssl;
+    server_name 35.197.106.164;
+
+    ssl_certificate /etc/letsencrypt/live/35.197.106.164/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/35.197.106.164/privkey.pem;
+
+    location / {
+        proxy_pass http://127.0.0.1:5000;  # Replace with your Python app's host and port
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
