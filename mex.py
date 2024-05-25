@@ -43,6 +43,6 @@ def first_fet():
 
 if __name__ == '__main__':
     #app.run(host='127.0.0.1', port=5000) # we run in localhost only so use this
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=80)
     # we run python app using gunicorn gunicorn --bind 127.0.0.1:5000 main:app
     # the nginx will auto forward it to port 80 (http)
