@@ -26,7 +26,7 @@ COPY nginx/sites-available/nginx.conf /etc/nginx/sites-available/nginx.conf
 # Create a symbolic link to enable the site-specific configuration
 RUN ln -sf /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/nginx.conf
 
-# Ensure the SSL certificates are copied to the correct location
+# change the domain name to copy SSL certificates
 COPY ssl/fullchain.pem /etc/letsencrypt/live/example.com/fullchain.pem
 COPY ssl/privkey.pem /etc/letsencrypt/live/example.com/privkey.pem
 
@@ -38,7 +38,7 @@ RUN chmod +x /app/entrypoint.sh && sed -i 's/\r$//' /app/entrypoint.sh
 #ENV SCRIPT_NAME=mex.py
 
 # Expose the ports for Nginx and Flask
-EXPOSE 443 5601
+EXPOSE 443
 
 # Run the entrypoint script
 CMD ["bash", "/app/entrypoint.sh"]
