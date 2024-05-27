@@ -43,7 +43,7 @@
 ## 5. Built Image and run Container by mounting secrets
    ```
    docker build -t gotest .
-   docker run --rm -it -p 443:443 \
+   docker run --rm -it -p 443:443 -d \
      --env-file /home/giru/.env \
      -v /{main nginx source}/nginx.conf:/etc/nginx/nginx.conf \
      -v /{site nginx source}/nginx.conf:/etc/nginx/sites-available/nginx.conf \
@@ -67,6 +67,12 @@
 ## 7. Debug   
    Sync repo from git
       `git pull origin main`
+      
+   Attach back the container
+      `docker attach gotest_container`
+      
+   Run without detach (-d) container
+      `docker run --rm -it -p 443:443 gotest.`
    
    Start Container in debug mode
       `docker run --rm -it -p 80:80 gotest /bin/bash`
