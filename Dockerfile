@@ -1,7 +1,7 @@
 # Use an official Python runtime as the base image
-#FROM python:3.10-slim
-#FROM python:latest
-FROM python:slim
+#FROM python:latest   # 1.5 GB+
+#FROM python:slim     # 250 MB
+FROM python:3.12-slim
 
 # Set the working directory in the container
 WORKDIR /app
