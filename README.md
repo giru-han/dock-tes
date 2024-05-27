@@ -53,8 +53,18 @@
      gotest
    ```
 
+## 6. Attach Detach Docker Container
+   Detach Running Container
+      Ctrl + P followed by Ctrl + Q
+      
+   Attach back the container
+      `docker attach gotest_container`
+      
+   Run without detach (-d) container
+      `docker run --rm -it -p 443:443 gotest.`
 
-## 6. Stop Docker Container
+
+## 7. Stop Docker Container
    ```
    docker ps
    docker stop gotest_container
@@ -64,15 +74,9 @@
    ```
 
 
-## 7. Debug   
+## 8. Debug   
    Sync repo from git
       `git pull origin main`
-      
-   Attach back the container
-      `docker attach gotest_container`
-      
-   Run without detach (-d) container
-      `docker run --rm -it -p 443:443 gotest.`
    
    Start Container in debug mode
       `docker run --rm -it -p 80:80 gotest /bin/bash`
