@@ -51,16 +51,16 @@
    ```
 
 6. Debug   
-   Sync repo from git
+   ## Sync repo from git
       `git pull origin main`
    
-   Start Container in debug mode
+   ## Start Container in debug mode
       `docker run --rm -it -p 80:80 gotest /bin/bash`
    
-   Start Container with mount file
+   ## Start Container with mount file
       `docker run -it -v /home/test.py:/app/mex.py gotest`
    
-   Debug into running container
+   ## Debug into running container
       `docker exec -it gotest_container /bin/bash`
    
    
