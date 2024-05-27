@@ -1,5 +1,6 @@
 # docker-testing for python
 
+
 ## 1. Setup Firewall
    ```
    sudo ufw enable
@@ -8,11 +9,13 @@
    sudo ufw status
    ```
 
+
 ## 2. Kill all apps that using port 5061, 443
    ```
    sudo lsof -i -P -n | grep LISTEN
    sudo lsof -i -P -n | grep LISTEN | grep -E '(:5601|:443)' | awk '{print $2}' | xargs sudo kill -9
    ```
+
 
 ## 3. Install Docker
    ```
@@ -24,10 +27,12 @@
    docker run hello-world
    ```
 
+
 ## 4. Clone repo
    ```
    git clone https://github.com/giru-han/dock-test.git
    ```
+
 
 ## 5. Built Image and run Container by mounting secrets
    ```
@@ -42,6 +47,7 @@
      gotest
    ```
 
+
 ## 6. Stop Docker Container
    ```
    docker ps
@@ -49,6 +55,7 @@
    docker kill gotest_container
    docker rmi gotest # Delete Image
    ```
+
 
 ## 7. Debug   
    Sync repo from git
