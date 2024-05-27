@@ -3,6 +3,8 @@
 - Nginx Proxy Forwarding
 - Gunicorn WSGI Server
 - Flask Server Application
+  
+![image](https://github.com/giru-han/dock-test/assets/109772802/166fb45c-f9c1-428b-aeb2-87aa98a9adda)
 
 
 ## 1. Setup Firewall
