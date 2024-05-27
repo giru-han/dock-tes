@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set environment variable
-export SCRIPT_NAME="mex.py"
+# export SCRIPT_NAME="mex.py"
 
 # Start Nginx in the background
 nginx &
