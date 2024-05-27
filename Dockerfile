@@ -35,7 +35,7 @@ COPY ssl/privkey.pem /etc/letsencrypt/live/example.com/privkey.pem
 RUN chmod +x /app/entrypoint.sh && sed -i 's/\r$//' /app/entrypoint.sh
 
 # Set environment variable
-ENV SCRIPT_NAME=mex.py
+#ENV SCRIPT_NAME=mex.py
 
 # Expose the ports for Nginx and Flask
 EXPOSE 443 5601

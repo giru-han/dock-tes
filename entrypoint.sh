@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set environment variable
-export SCRIPT_NAME="mex.py"
+# export SCRIPT_NAME="mex.py"
 
 # Start Nginx in the background
 nginx &
@@ -10,4 +10,4 @@ nginx &
 #python "$SCRIPT_NAME"
 
 # Run Gunicorn
-exec gunicorn --bind 127.0.0.1:5601 --timeout 300 "$SCRIPT_NAME":app
+exec gunicorn --bind 127.0.0.1:5601 --timeout 300 mex.py:app
