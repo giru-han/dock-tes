@@ -16,7 +16,7 @@
    ```
 
 
-## 2. Kill all apps that using port 5061, 443
+## 2. Kill all apps that using port 5061 and 443
    ```
    sudo lsof -i -P -n | grep LISTEN
    sudo lsof -i -P -n | grep LISTEN | grep -E '(:5601|:443)' | awk '{print $2}' | xargs sudo kill -9
