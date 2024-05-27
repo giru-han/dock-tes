@@ -60,6 +60,7 @@
    docker stop gotest_container
    docker kill gotest_container
    docker rmi gotest # Delete Image
+   pkill -f container # kill all containers
    ```
 
 
