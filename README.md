@@ -1,4 +1,8 @@
-# docker-testing for python
+# Docker Setup for Python with
+- Complete SSL Certificate Mounting
+- Nginx Proxy Forwarding
+- Gunicorn WSGI Server
+- Flask Server Application
 
 
 ## 1. Setup Firewall
