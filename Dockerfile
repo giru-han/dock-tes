@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y nginx && apt-get clean
 RUN rm /etc/nginx/sites-enabled/default
 
 # Copy the main Nginx configuration file
-#COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Copy your site-specific configuration file
 COPY nginx/sites-available/nginx.conf /etc/nginx/sites-available/nginx.conf
